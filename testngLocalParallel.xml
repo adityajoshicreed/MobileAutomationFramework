@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AutomationSuite" verbose="1" parallel="tests" thread-count="2">
+	<test name="DeviceOneTest">
+		<parameter name="config" value="DeviceConf/Local/DeviceOne.properties"/>
+		<parameter name="serviceType" value="Android"/>	
+		<packages>
+			<package name="smoketests" />
+		</packages>
+	</test>
+	<test name="DeviceTwoTest">
+		<parameter name="config" value="DeviceConf/Local/DeviceTwo.properties"/>
+		<parameter name="serviceType" value="Android"/>	
+		<packages>
+			<package name="smoketests" />
+		</packages>
+	</test>
+</suite> <!-- Suite -->

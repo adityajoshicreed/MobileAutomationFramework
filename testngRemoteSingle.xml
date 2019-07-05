@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="AutomationSuite" verbose="1">
-	<test name="SmokeTest">
+	<test name="DeviceOneTest">
+		<parameter name="config" value="DeviceConf/Remote/DeviceOne.properties"/>
+		<parameter name="serviceType" value="BrowserStackAndroid"/>		
 		<packages>
 			<package name="smoketests" />
 		</packages>

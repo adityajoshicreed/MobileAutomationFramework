@@ -7,19 +7,22 @@ import java.util.Properties;
 public class PropertyReader {
 
 	private FileInputStream fis = null;
+	private Properties p = null;
 
-	public String getProperty(String property) {
+	public PropertyReader(String path) {
 		try {
 			fis = new FileInputStream(
-					getClass().getClassLoader().getResource("DriverConf/Android.properties").getFile());
-			Properties p = new Properties();
+					getClass().getClassLoader().getResource(path).getFile());
+			p = new Properties();
 			p.load(fis);
 			fis.close();
-			return p.getProperty(property);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return null;
+	}
+	
+	public String getProperty(String property) {
+		return p.getProperty(property);
 	}
 
 }

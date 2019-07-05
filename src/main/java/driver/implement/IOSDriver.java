@@ -8,7 +8,7 @@ public class IOSDriver extends DriverFactory{
 
 
 	@Override
-	public WebDriver genDriver() {
+	public WebDriver genDriver(String config) {
 		return null;
 	}
 
